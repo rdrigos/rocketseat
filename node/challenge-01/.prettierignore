@@ -1,0 +1,10 @@
+**/.idea
+**/.idx
+**/.next
+**/.vscode
+**/node_modules
+**/logs
+package.json
+package-lock.json
+yarn.lock
+pnpm-lock.yaml

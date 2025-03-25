@@ -1,0 +1,42 @@
+# Welcome endpoint 
+GET http://localhost:3000/
+Content-Type: application/json
+
+###
+
+# Endpoint to create a task
+POST http://localhost:3000/tasks
+Content-Type: application/json
+
+{
+  "title": "Task 01",
+  "description": "Descrição da task"
+}
+
+###
+
+# Endpoints to list all tasks
+GET http://localhost:3000/tasks
+Content-Type: application/json
+
+###
+
+# Endpoint to update a task based on the id
+PUT http://localhost:3000/tasks/bynpzv8aec96bk8kosl78n3v
+Content-Type: application/json
+
+{
+  "description": "Descrição da task atualizada"
+}
+
+###
+
+# Endpoint to delete a task
+DELETE http://localhost:3000/tasks/k7gq8az1jeeocq4iasgt1uie
+Content-Type: application/json
+
+###
+
+# Endpoint to complete a task
+PATCH http://localhost:3000/tasks/bynpzv8aec96bk8kosl78n3v/complete
+Content-Type: application/json
