@@ -61,10 +61,14 @@ A OCI (Open Container Initiative) é uma especificação aberta que define padr�
 
 ### Comandos
 
-| Contexto                      | Comando                                               |
-| ----------------------------- | ----------------------------------------------------- |
-| Listar imagens                | `docker image ls`                                     |
-| Listar containers em execução | `docker ps`                                           |
-| Buildar imagem                | `docker build -t [Nome da imagem]:[Tag: 1.0.0] .`     |
-| Rodar (Preso no Console)      | `docker run --rm -p [Porta]:[Porta] [Nome da imagem]` |
-| Rodar                         | `docker run -p [Porta]:[Porta] -d [Nome da imagem]`   |
+| Contexto                          | Comando                                                  |
+| --------------------------------- | -------------------------------------------------------- |
+| Listar imagens                    | `docker image ls`                                        |
+| Listar containers em execução     | `docker ps`                                              |
+| Buildar imagem                    | `docker build -t [Nome da imagem]:[Tag: 1.0.0] .`        |
+| Rodar (Preso no Console)          | `docker run --rm -p [Porta]:[Porta] [Nome da imagem]`    |
+| Rodar                             | `docker run -p [Porta]:[Porta] -d [Nome da imagem]`      |
+| Listar Networks                   | `docker network ls`                                      |
+| Criar Network                     | `docker network create [Nome da Rede]`                   |
+| Criar Network (Driver especifico) | `docker network create --driver [driver] [Nome da Rede]` |
+| Associar a rede ao container      | `docker network connect [id da rede] [id do container]`  |
