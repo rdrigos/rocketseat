@@ -1,0 +1,34 @@
+version: "3.8"
+
+networks:
+  app-network:
+    driver: bridge
+
+services:
+  postgres:
+    image: bitnami/postgresql:17.5.0
+    container_name: postgres
+    restart: always
+    environment:
+      POSTGRESQL_USERNAME: docker
+      POSTGRESQL_PASSWORD: docker@challenge
+      POSTGRESQL_DATABASE: challenge
+    networks:
+      - app-network
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  app:
+    build: .
+    container_name: app
+    ports:
+      - "3333:3333"
+    depends_on:
+      - postgres
+    networks:
+      - app-network
+
+volumes:
+  pgdata:
